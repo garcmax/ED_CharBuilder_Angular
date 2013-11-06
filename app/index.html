@@ -29,6 +29,36 @@
       </span>
       <p>{{race.desc}}</p>
 	</div>
+	
+	<div ng-controller="AttributsController">
+		<form name="attributs">
+			<span> Nombre de points d'attributs restants : {{total}}</span><br />
+			<span> Dexterité : <input type="number" name="dex" ng-model="dex" min="2" max="18" required></span><br />
+			<span class="error" ng-show="attributs.dex.$error.required">required!</span>
+			<span class="error" ng-show="attributs.dex.$error.min">must be between 2 and 18</span>
+			<span class="error" ng-show="attributs.dex.$error.max">must be between 2 and 18</span><br />
+			<span> Force : <input type="number" name="for" ng-model="for"  min="2" max="18" required></span><br />
+			<span class="error" ng-show="attributs.for.$error.required">required!</span>
+			<span class="error" ng-show="attributs.for.$error.min">must be between 2 and 18</span>
+			<span class="error" ng-show="attributs.for.$error.max">must be between 2 and 18</span><br />
+			<span> Constitution : <input type="number" name="con" ng-model="con"  min="2" max="18" required></span><br />
+			<span class="error" ng-show="attributs.con.$error.required">required!</span>
+			<span class="error" ng-show="attributs.con.$error.min">must be between 2 and 18</span>
+			<span class="error" ng-show="attributs.con.$error.max">must be between 2 and 18</span><br />
+			<span> Perception : <input type="number" name="per" ng-model="per"  min="2" max="18" required></span><br />
+			<span class="error" ng-show="attributs.per.$error.required">required!</span>
+			<span class="error" ng-show="attributs.per.$error.min">must be between 2 and 18</span>
+			<span class="error" ng-show="attributs.per.$error.max">must be between 2 and 18</span><br />
+			<span> Volonté : <input type="number" name="vol" ng-model="vol"  min="2" max="18" required></span><br />
+			<span class="error" ng-show="attributs.vol.$error.required">required!</span>
+			<span class="error" ng-show="attributs.vol.$error.min">must be between 2 and 18</span>
+			<span class="error" ng-show="attributs.vol.$error.max">must be between 2 and 18</span><br />
+			<span> Charisme : <input type="number" name="cha" ng-model="cha"  min="2" max="18" required></span><br />
+			<span class="error" ng-show="attributs.cha.$error.required">required!</span>
+			<span class="error" ng-show="attributs.cha.$error.min">must be between 2 and 18</span>
+			<span class="error" ng-show="attributs.cha.$error.max">must be between 2 and 18</span><br />							
+		</form>
+	</div>
 
 	<div ng-view></div>
 

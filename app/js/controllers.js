@@ -23,4 +23,9 @@ angular.module('myApp.controllers', []).
     	$scope.races = data;
   	});
   }
+  
+  function AttributsController($scope, $http) {
+  	$scope.total = 66;
+	
+  }
 

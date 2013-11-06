@@ -1,0 +1,12 @@
+[
+	{
+		"name" : "Navigateur du Ciel",
+		"image" : "img/disciplines/navi.jpg",
+		"desc" : "Le navigateur du ciel navigue dans le ciel."
+	},
+	{
+		"name" : "Archer",
+		"image" : "img/disciplines/archer.jpg",
+		"desc" : "L'archer tire des flèches."
+	}
+]

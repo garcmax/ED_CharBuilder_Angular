@@ -20,6 +20,15 @@
       </span>
       <p>{{disc.desc}}</p>
 	</div>
+	
+	<div ng-controller="RacesController">
+	 <span  class="nullable">
+        <select ng-model="race" ng-options="race.name for race in races">
+          <option value="">-- choose race --</option>
+        </select>
+      </span>
+      <p>{{race.desc}}</p>
+	</div>
 
 	<div ng-view></div>
 

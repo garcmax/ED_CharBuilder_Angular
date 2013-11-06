@@ -1,0 +1,12 @@
+[
+	{
+		"name" : "Elfe",
+		"image" : "img/races/elfe.jpg",
+		"desc" : "les elfes sont parfois poëtes."
+	},
+	{
+		"name" : "Nain",
+		"image" : "img/races/nain.jpg",
+		"desc" : "Ce sont des nains débrouillard. Ils vivent dans la brume ?"
+	}
+]

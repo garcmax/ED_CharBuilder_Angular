@@ -17,3 +17,10 @@ angular.module('myApp.controllers', []).
     	$scope.disciplines = data;
   	});
   }
+  
+  function RacesController($scope, $http) {
+  	$http.get('resources/races/races.json').success(function(data) {
+    	$scope.races = data;
+  	});
+  }
+

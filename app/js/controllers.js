@@ -2,30 +2,28 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', function($scope, $http) {
-	  	$http.get('resources/disciplines/disciplines.json').success(function(data) {
-    	$scope.disc = data;
-  	});	
-  })
-  .controller('MyCtrl2', [function() {
-
-  }]);
+var earthdawnController = angular.module('earthdawn.controllers', []);
   
-  function DisciplinesController($scope, $http) {
+  earthdawnController.controller('DisciplinesController', ['$scope', '$http', function($scope, $http) {
   	$http.get('resources/disciplines/disciplines.json').success(function(data) {
     	$scope.disciplines = data;
   	});
-  }
+  }]);
   
-  function RacesController($scope, $http) {
+  earthdawnController.controller('RacesController', ['$scope', '$http', function($scope, $http) {
   	$http.get('resources/races/races.json').success(function(data) {
     	$scope.races = data;
   	});
-  }
+  }]);
   
-  function AttributsController($scope, $http) {
-  	$scope.total = 66;
-	
-  }
+  earthdawnController.controller('AttributsController', ['$scope', 'attPoints', function($scope, attPoints) {  	
+	$scope.char = {};
+	$scope.char.dex = 5;
+	$scope.char.for = 5;
+	$scope.char.con = 5;
+	$scope.char.per = 5;
+	$scope.char.vol = 5;
+	$scope.char.cha = 5;
+	$scope.attPoints = attPoints;
+  }]);
 

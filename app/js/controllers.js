@@ -10,20 +10,35 @@ var earthdawnController = angular.module('earthdawn.controllers', []);
   	});
   }]);
   
-  earthdawnController.controller('RacesController', ['$scope', '$http', function($scope, $http) {
+  earthdawnController.controller('RacesController', ['$scope', '$http', 'raceService', function($scope, $http, raceService) {
   	$http.get('resources/races/races.json').success(function(data) {
     	$scope.races = data;
   	});
+  	$scope.$watch(
+  		function() {
+  			return $scope.raceId;
+  		},
+  		function(newVal, oldVal) {
+	      	raceService.setRaceId(newVal);
+		});
   }]);
   
-  earthdawnController.controller('AttributsController', ['$scope', 'attPoints', function($scope, attPoints) {  	
-	$scope.char = {};
-	$scope.char.dex = 5;
-	$scope.char.for = 5;
-	$scope.char.con = 5;
-	$scope.char.per = 5;
-	$scope.char.vol = 5;
-	$scope.char.cha = 5;
-	$scope.attPoints = attPoints;
+  earthdawnController.controller('AttributsController', ['$scope', 'attributsService', 'raceService', function($scope, attributsService, raceService) {
+  	$scope.points = attributsService.getPoints();
+  	$scope.$watch(
+  		function() {
+  			return raceService.getRaceId();
+  		},
+  		function(newVal, oldVal) {
+			$scope.char = raceService.getAttributeRequirements();
+			attributsService.compute($scope.char);
+		  	$scope.points = attributsService.getPoints();
+		});
+		
+	$scope.compute = function() {
+		console.log("attributs ont changés");
+		attributsService.compute($scope.char);
+	  	$scope.points = attributsService.getPoints();
+	}
   }]);
 

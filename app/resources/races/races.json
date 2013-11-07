@@ -2,11 +2,50 @@
 	{
 		"name" : "Elfe",
 		"image" : "img/races/elfe.jpg",
-		"desc" : "les elfes sont parfois poëtes."
+		"desc" : "les elfes sont parfois poëtes.",
+		"id":0
+	},
+	{
+		"name" : "Humain",
+		"image" : "img/races/humain.jpg",
+		"desc" : "Les humains sont humains.",
+		"id":1
 	},
 	{
 		"name" : "Nain",
 		"image" : "img/races/nain.jpg",
-		"desc" : "Ce sont des nains débrouillard. Ils vivent dans la brume ?"
+		"desc" : "Ce sont des nains débrouillard. Ils vivent dans la brume ?",
+		"id":2
+	},
+	{
+		"name" : "Obsidien",
+		"image" : "img/races/obsidien.jpg",
+		"desc" : "Le mec c'est du ciment.",
+		"id":3
+	},
+	{
+		"name" : "Ork",
+		"image" : "img/races/ork.jpg",
+		"desc" : "Les orks sont verts et moches.",
+		"id":4
+	},
+	{
+		"name" : "Sylphelin",
+		"image" : "img/races/sylphelin.jpg",
+		"desc" : "BzzzzzzzzzzzzBzzzzz *SPROUTCH* mort le stik-mou.",
+		"id":5
+	},
+	{
+		"name" : "Troll",
+		"image" : "img/races/troll.jpg",
+		"desc" : "Non je me transforme pas en pierre...",
+		"id":6
+	},
+	{
+		"name" : "T'Skrang",
+		"image" : "img/races/tskrang.jpg",
+		"desc" : "Aie confiaaaaaaaaaaaance, endors toiiiiiiiiiiiiii.",
+		"id":7
 	}
+
 ]

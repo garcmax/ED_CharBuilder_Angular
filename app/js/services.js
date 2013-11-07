@@ -9,12 +9,13 @@ var earthdawnServices = angular.module('earthdawn.services', []);
 
 	earthdawnServices.value('version', '0.1');
 	
-	earthdawnServices.factory('attPoints', function() {
+	earthdawnServices.factory('attributsService', function() {
 		var points = 66;
 		var basePoints = 66;
-		var myAttPointsService = {};
+		var myAttributsService = {};
 		
-		myAttPointsService.compute = function(char) {
+		myAttributsService.compute = function(char) {
+		console.log("attributsService method compute");
 			compute(char.dex);
 			compute(char.for);
 			compute(char.con);
@@ -25,7 +26,8 @@ var earthdawnServices = angular.module('earthdawn.services', []);
 			basePoints= 66;
 		};
 		
-		myAttPointsService.getPoints = function() {
+		myAttributsService.getPoints = function() {
+			console.log("attributsService method getPoints = " + points);
 			return points;
 		};
 
@@ -59,8 +61,62 @@ var earthdawnServices = angular.module('earthdawn.services', []);
 				basePoints = basePoints - (att - 5);
 				break;
 			}			
-		}
+		};
 
 		
-		return myAttPointsService;
+		return myAttributsService;
+	});
+	
+	earthdawnServices.factory('raceService', function() {
+		var myRaceService = {};
+		var raceId = 0;
+		var char = {};
+		
+		myRaceService.setRaceId = function(newRaceId) {
+			console.log(newRaceId);
+			raceId = newRaceId;
+		};
+		
+		myRaceService.getRaceId = function() {
+			return raceId;
+		};
+		
+		myRaceService.getAttributeRequirements = function() {
+		switch(raceId) {
+			case (3):
+				console.log("je suis un obsidien");
+				char.dex = 5;
+				char.for = 15;
+				char.for.min = 15;
+				char.con = 5;
+				char.per = 5;
+				char.vol = 5
+				char.cha = 5;
+			case (5):
+			//force minimum de 11
+				break;
+			case (6):
+			console.log("je suis un troll");
+				char.dex = 5;
+				char.for = 11;
+				char.for.min = 11;
+				char.con = 11;
+				char.per = 5;
+				char.vol = 5
+				char.cha = 5;
+				break;
+			default :
+				char.dex = 5;
+				char.for = 5;
+				char.for.min = 2;
+				char.con = 5;
+				char.per = 5;
+				char.vol = 5
+				char.cha = 5;
+				break;
+			}			
+			return char;
+		};
+		
+		return myRaceService;
 	});

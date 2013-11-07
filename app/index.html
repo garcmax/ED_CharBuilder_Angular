@@ -37,11 +37,11 @@
 			<span class="error" ng-show="attributs.dex.$error.required">required!</span>
 			<span class="error" ng-show="attributs.dex.$error.min">must be between 2 and 18</span>
 			<span class="error" ng-show="attributs.dex.$error.max">must be between 2 and 18</span><br />
-			<span> Force : <input type="number" name="for" ng-model="char.for"  min="{{char.for.min}}" max="18" required ng-change="compute()"></span><br />
+			<span> Force : <input type="number" name="for" ng-model="char.for"  min="{{min.for}}" max="{{max.for}}" required ng-change="compute()"></span><br />
 			<span class="error" ng-show="attributs.for.$error.required">required!</span>
 			<span class="error" ng-show="attributs.for.$error.min">must be between 2 and 18</span>
 			<span class="error" ng-show="attributs.for.$error.max">must be between 2 and 18</span><br />
-			<span> Constitution : <input type="number" name="con" ng-model="char.con"  min="2" max="18" required ng-change="compute()"></span><br />
+			<span> Constitution : <input type="number" name="con" ng-model="char.con"  min="{{min.con}}" max="{{max.con}}" required ng-change="compute()"></span><br />
 			<span class="error" ng-show="attributs.con.$error.required">required!</span>
 			<span class="error" ng-show="attributs.con.$error.min">must be between 2 and 18</span>
 			<span class="error" ng-show="attributs.con.$error.max">must be between 2 and 18</span><br />
@@ -56,13 +56,14 @@
 			<span> Charisme : <input type="number" name="cha" ng-model="char.cha"  min="2" max="18" required ng-change="compute()"></span><br />
 			<span class="error" ng-show="attributs.cha.$error.required">required!</span>
 			<span class="error" ng-show="attributs.cha.$error.min">must be between 2 and 18</span>
-			<span class="error" ng-show="attributs.cha.$error.max">must be between 2 and 18</span><br />							
+			<span class="error" ng-show="attributs.cha.$error.max">must be between 2 and 18</span><br />	
+			<button ng-click="addRacialMod()">Ajouter les modificateurs raciaux</button>						
 		</form>
 	</div>
 
 	<div ng-view></div>
 
-	<div>Angular seed app: v<span app-version></span></div>
+	<div>Earthdawn Character Builder app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>

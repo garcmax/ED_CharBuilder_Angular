@@ -71,6 +71,8 @@ var earthdawnServices = angular.module('earthdawn.services', []);
 		var myRaceService = {};
 		var raceId = 0;
 		var char = {};
+		var min = {};
+		var max = {};
 		
 		myRaceService.setRaceId = function(newRaceId) {
 			console.log(newRaceId);
@@ -81,26 +83,51 @@ var earthdawnServices = angular.module('earthdawn.services', []);
 			return raceId;
 		};
 		
+		myRaceService.getMinAtt = function() {
+			return min;
+		}
+
+		myRaceService.getMaxAtt = function() {
+			return max;
+		}
+		
 		myRaceService.getAttributeRequirements = function() {
 		switch(raceId) {
 			case (3):
 				console.log("je suis un obsidien");
 				char.dex = 5;
 				char.for = 15;
-				char.for.min = 15;
+				min.for = 15;
+				max.for = 18;
 				char.con = 5;
+				min.con = 2;
+				max.con = 18;
 				char.per = 5;
 				char.vol = 5
 				char.cha = 5;
+				break;
 			case (5):
-			//force minimum de 11
+				console.log("je suis un sylphelin");
+					char.dex = 5;
+				char.for = 11;
+				min.for = 2;
+				max.for = 11;
+				char.con = 5;
+				min.con = 2;
+				max.con = 18;
+				char.per = 5;
+				char.vol = 5
+				char.cha = 5;
 				break;
 			case (6):
 			console.log("je suis un troll");
 				char.dex = 5;
 				char.for = 11;
-				char.for.min = 11;
+				min.for = 11;
+				max.for = 18;
 				char.con = 11;
+				min.con = 11;
+				max.con = 18;
 				char.per = 5;
 				char.vol = 5
 				char.cha = 5;
@@ -108,8 +135,11 @@ var earthdawnServices = angular.module('earthdawn.services', []);
 			default :
 				char.dex = 5;
 				char.for = 5;
-				char.for.min = 2;
+				min.for = 2;
+				max.for = 18;
 				char.con = 5;
+				min.con = 2;
+				max.con = 18;
 				char.per = 5;
 				char.vol = 5
 				char.cha = 5;

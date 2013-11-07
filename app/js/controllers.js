@@ -25,6 +25,8 @@ var earthdawnController = angular.module('earthdawn.controllers', []);
   
   earthdawnController.controller('AttributsController', ['$scope', 'attributsService', 'raceService', function($scope, attributsService, raceService) {
   	$scope.points = attributsService.getPoints();
+  	$scope.min = raceService.getMinAtt(); 
+  	$scope.max = raceService.getMaxAtt(); 
   	$scope.$watch(
   		function() {
   			return raceService.getRaceId();
@@ -39,6 +41,9 @@ var earthdawnController = angular.module('earthdawn.controllers', []);
 		console.log("attributs ont changés");
 		attributsService.compute($scope.char);
 	  	$scope.points = attributsService.getPoints();
+	}
+	$scope.addRacialMod = function() {
+		$scope.char = attributsService.addRacialMod($scope.char);
 	}
   }]);
 

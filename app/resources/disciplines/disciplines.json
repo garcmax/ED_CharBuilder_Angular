@@ -1,12 +1,92 @@
 [
 	{
-		"name" : "Navigateur du Ciel",
-		"image" : "img/disciplines/navi.jpg",
-		"desc" : "Le navigateur du ciel navigue dans le ciel."
-	},
-	{
 		"name" : "Archer",
 		"image" : "img/disciplines/archer.jpg",
-		"desc" : "L'archer tire des flèches."
+		"desc" : "L'archer tire des flèches.",
+		"id" : 0
+	}
+	{
+		"name" : "Cavalier",
+		"image" : "img/disciplines/cavalier.jpg",
+		"desc" : "Le cavalier cavale.",
+		"id" : 1
+	}
+	{
+		"name" : "Eclaireur",
+		"image" : "img/disciplines/eclaireur.jpg",
+		"desc" : "L'éclaireur tient la torche.",
+		"id" : 2
+	}
+	{
+		"name" : "Ecumeur du Ciel",
+		"image" : "img/disciplines/ecu.jpg",
+		"desc" : "L'écumeur du ciel a toujours une vague sur lui.",
+		"id" : 3
+	},
+	{
+		"name" : "Elementaliste",
+		"image" : "img/disciplines/elem.jpg",
+		"desc" : "L'elementaliste aime l'emmental.",
+		"id" : 4
+	}
+	{
+		"name" : "Forgeron",
+		"image" : "img/disciplines/forge.jpg",
+		"desc" : "C'est en forgeant qu'on devient forgeron",
+		"id" : 5
+	}
+	{
+		"name" : "Guerrier",
+		"image" : "img/disciplines/guerrier.jpg",
+		"desc" : "CROM.",
+		"id" : 6
+	}
+	{
+		"name" : "Illusioniste",
+		"image" : "img/disciplines/illu.jpg",
+		"desc" : "garcimor est mon maitre.",
+		"id" : 7
+	}
+	{
+		"name" : "Maitre d'armes",
+		"image" : "img/disciplines/armes.jpg",
+		"desc" : "A la fin de l'envoie, je touche.",
+		"id" : 8
+	}
+	{
+		"name" : "Maitre des animaux",
+		"image" : "img/disciplines/animaux.jpg",
+		"desc" : "Bon chien !",
+		"id" : 9
+	}
+	{
+		"name" : "Navigateur du ciel",
+		"image" : "img/disciplines/navi.jpg",
+		"desc" : "Où est mon sextant ?",
+		"id" : 10
+	}
+	{
+		"name" : "Nécromancien",
+		"image" : "img/disciplines/archer.jpg",
+		"desc" : "Burn the witches !#1",
+		"id" : 11
+	}
+	{
+		"name" : "Sorcier",
+		"image" : "img/disciplines/sorcier.jpg",
+		"desc" : "Burn the witches !#2",
+		"id" : 12
+	}
+	{
+		"name" : "Troubadour",
+		"image" : "img/disciplines/trouba.jpg",
+		"desc" : "Quand chanta pour les funérailles du roi Loth mort dans son lit.",
+		"id" : 13
+	}
+	{
+		"name" : "Voleur",
+		"image" : "img/disciplines/voleur.jpg",
+		"desc" : "Je vole, je vole !!",
+		"id" : 14
 	}
 ]
